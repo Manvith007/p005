@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #1a237e;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.75rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  text-align: center;
+  background-color: white;
+  border-radius: 12px;
+  padding: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.card label {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+}
+
+footer {
+  background-color: #1a237e;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .card {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 0.5rem;
+    grid-template-columns: 1fr;
+  }
+}
